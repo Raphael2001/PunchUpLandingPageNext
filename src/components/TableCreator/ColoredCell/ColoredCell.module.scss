@@ -1,0 +1,43 @@
+@import "src/styles/imports.scss";
+.colored-cel-wrapper {
+  width: rem(120);
+  text-align: center;
+  color: white;
+  font-size: rem(14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-block: rem(5);
+}
+
+@media (min-width: em($tablet)) {
+  .colored-cel-wrapper {
+    width: rem(120);
+
+    font-size: rem(14);
+
+    padding-block: rem(5);
+  }
+}
+
+@media (min-width: em($desktop)) {
+  .colored-cel-wrapper {
+    width: 30%;
+    min-width: rem(100);
+
+    font-size: rem(16);
+
+    padding-block: rem(7);
+  }
+}
+
+@media (min-width: em($desktop_large)) {
+  .colored-cel-wrapper {
+    min-width: rem(100);
+
+    font-size: rem(16);
+
+    padding-block: rem(7);
+  }
+}

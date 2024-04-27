@@ -1,0 +1,17 @@
+@import "src/styles/imports.scss";
+@import "src/components/Basic/BasicTextArea/BasicTextArea.module.scss";
+@import "src/components/Basic/BasicInputErrrorMsg/BasicInputErrrorMsg.module.scss";
+
+.text-area-wrapper {
+  position: relative;
+
+  .text-area {
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid rgba(148, 148, 148, 1);
+    border-radius: 0px;
+    &:focus {
+      border-bottom: 1px solid $input-focus-color;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "src/styles/imports.scss";
+
+.text-area {
+  width: 100%;
+
+  border-color: rgba(148, 148, 148, 1);
+
+  @include input();
+
+  &::placeholder {
+    @include placeholder();
+  }
+
+  @include focus-border();
+}

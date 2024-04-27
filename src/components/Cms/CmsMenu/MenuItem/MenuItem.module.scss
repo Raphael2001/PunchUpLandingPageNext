@@ -1,0 +1,50 @@
+@import "src/styles/imports.scss";
+.sidebar-menu-link {
+  height: rem(60);
+  align-items: center;
+  display: flex;
+  z-index: 20;
+  padding-inline-start: rem(20);
+  margin-top: rem(10);
+
+  &.active {
+    background-color: $cms-main-color;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 3px;
+  }
+  .sidebar-menu-link-text {
+    font-size: rem(20);
+    font-weight: 200;
+    color: $cms-basic-white;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: em($tablet)) {
+  .sidebar-menu-link {
+    height: rem(60);
+    margin-top: rem(10);
+
+    padding-inline-start: rem(20);
+
+    .sidebar-menu-link-text {
+      font-size: rem(20);
+    }
+  }
+}
+
+@media (min-width: em($desktop)) {
+  .sidebar-menu-link {
+    margin-top: rem(10);
+
+    height: rem(80);
+
+    padding-inline-start: rem(20);
+
+    .sidebar-menu-link-text {
+      font-size: rem(22);
+    }
+  }
+}

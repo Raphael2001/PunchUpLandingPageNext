@@ -1,0 +1,11 @@
+@import "src/styles/imports";
+
+.login-btn {
+  width: 100%;
+  height: rem(40);
+  border-radius: rem(16);
+  background-color: $black;
+  color: $white;
+  font-family: $font-medium;
+  background: $button-background-login;
+}

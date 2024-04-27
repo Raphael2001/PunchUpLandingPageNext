@@ -1,0 +1,40 @@
+@import "src/styles/imports.scss";
+.button {
+  font-size: rem(16);
+  padding: rem(6) rem(15);
+  &.size {
+    width: rem(100);
+    height: rem(30);
+  }
+
+  &.create {
+    @include cmsButtonBlue;
+  }
+  &.delete {
+    @include cmsButtonRed;
+  }
+  &.update {
+    @include cmsButtonGreen;
+  }
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+@media (min-width: em($tablet)) {
+  .button {
+    font-size: rem(18);
+  }
+}
+
+@media (min-width: em($desktop)) {
+  .button {
+    font-size: rem(20);
+    &.size {
+      width: rem(170);
+      height: rem(35);
+    }
+  }
+}

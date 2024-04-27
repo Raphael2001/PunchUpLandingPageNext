@@ -1,0 +1,58 @@
+@import "src/styles/imports.scss";
+
+.choose-date-wrapper {
+  width: rem(277);
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  height: rem(164);
+  overflow-y: scroll;
+  .option-card {
+    flex-basis: 33%;
+    font-size: rem(16);
+    line-height: rem(18);
+    color: #005688;
+    margin-top: rem(23);
+    &.selected {
+      font-family: $font-semibold;
+    }
+  }
+}
+@media (min-width: em($tablet)) {
+  .choose-date-wrapper {
+    width: rem(277);
+
+    height: rem(164);
+    .option-card {
+      font-size: rem(16);
+      line-height: rem(18);
+      margin-top: rem(23);
+    }
+  }
+}
+
+@media (min-width: em($desktop)) {
+  .choose-date-wrapper {
+    width: rem(277);
+
+    height: rem(164);
+    .option-card {
+      font-size: rem(16);
+      line-height: rem(18);
+      margin-top: rem(23);
+    }
+  }
+}
+
+@media (min-width: $media_desktop_large) {
+  .choose-date-wrapper {
+    width: rem(277);
+
+    height: rem(164);
+    .option-card {
+      font-size: rem(16);
+      line-height: rem(18);
+      margin-top: rem(23);
+    }
+  }
+}

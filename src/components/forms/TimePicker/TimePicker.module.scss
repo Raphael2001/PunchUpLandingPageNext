@@ -1,0 +1,289 @@
+@import "src/styles/imports.scss";
+$width: 150;
+
+.time-picker-wrapper {
+  width: rem($width);
+  height: rem(40);
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+  }
+  &.disabled {
+    opacity: 0.3;
+  }
+  &.active {
+    .time-picked-button {
+      z-index: 20;
+    }
+  }
+  .time-picked-button {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-inline: rem(12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $grey;
+    border-radius: rem(3);
+    background-color: $white;
+
+    .time-picked {
+      font-family: $font-light;
+      font-size: rem(17);
+    }
+    .clock-icon {
+      width: rem(20);
+      height: rem(20);
+      object-fit: contain;
+    }
+  }
+
+  .time-picker-container {
+    position: absolute;
+    width: rem($width);
+    background-color: $white;
+    height: 0;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+
+    &.active {
+      height: rem(270);
+      z-index: 30;
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+        0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+      border-radius: rem(8);
+      .actions {
+        display: flex;
+      }
+    }
+
+    .time-lists {
+      width: rem($width);
+      display: flex;
+      flex-direction: row-reverse;
+      height: 87%;
+      overflow: hidden;
+      .time-panel-column {
+        width: 50%;
+        overflow: auto;
+        margin-block: rem(4);
+        @include hideScrollbar;
+        &:nth-of-type(1) {
+          border-right: 1px solid rgba(5, 5, 5, 0.06);
+        }
+
+        list-style-type: none;
+        .time-cell {
+          height: rem(30);
+          margin: 0 2px;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &.selected {
+            background-color: #e6f4ff;
+            .time-cell-inner {
+              font-family: $font-medium;
+            }
+          }
+          .time-cell-inner {
+            font-size: rem(16);
+            font-family: $font-light;
+            color: $grey;
+          }
+        }
+      }
+    }
+    .actions {
+      height: 13%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-inline: rem(4);
+      border-top: 1px solid rgba(5, 5, 5, 0.06);
+
+      .ok-button {
+        font-size: rem(16);
+        width: rem(70);
+        height: rem(20);
+        @include cmsButtonBlue;
+      }
+    }
+  }
+}
+
+@media (min-width: em($tablet)) {
+  $width: 220;
+  .time-picker-wrapper {
+    width: rem($width);
+    height: rem(40);
+
+    .time-picked-button {
+      padding-inline: rem(12);
+
+      border-radius: rem(3);
+
+      .time-picked {
+        font-size: rem(17);
+      }
+      .clock-icon {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+
+    .time-picker-container {
+      width: rem($width);
+
+      &.active {
+        height: rem(270);
+
+        border-radius: rem(8);
+      }
+
+      .time-lists {
+        width: rem($width);
+
+        .time-panel-column {
+          margin-block: rem(4);
+
+          .time-cell {
+            height: rem(30);
+
+            .time-cell-inner {
+              font-size: rem(16);
+            }
+          }
+        }
+      }
+      .actions {
+        margin-inline: rem(4);
+
+        .ok-button {
+          font-size: rem(16);
+          width: rem(70);
+          height: rem(20);
+        }
+      }
+    }
+  }
+}
+@media (min-width: em($desktop)) {
+  $width: 220;
+  .time-picker-wrapper {
+    width: rem($width);
+    height: rem(40);
+
+    .time-picked-button {
+      padding-inline: rem(12);
+
+      border-radius: rem(3);
+
+      .time-picked {
+        font-size: rem(17);
+      }
+      .clock-icon {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+
+    .time-picker-container {
+      width: rem($width);
+
+      &.active {
+        height: rem(270);
+
+        border-radius: rem(8);
+      }
+
+      .time-lists {
+        width: rem($width);
+
+        .time-panel-column {
+          margin-block: rem(4);
+
+          .time-cell {
+            height: rem(30);
+
+            .time-cell-inner {
+              font-size: rem(16);
+            }
+          }
+        }
+      }
+      .actions {
+        margin-inline: rem(4);
+
+        .ok-button {
+          font-size: rem(16);
+          width: rem(70);
+          height: rem(20);
+        }
+      }
+    }
+  }
+}
+@media (min-width: em($desktop_large)) {
+  $width: 220;
+  .time-picker-wrapper {
+    width: rem($width);
+    height: rem(40);
+
+    .time-picked-button {
+      padding-inline: rem(12);
+
+      border-radius: rem(3);
+
+      .time-picked {
+        font-size: rem(17);
+      }
+      .clock-icon {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+
+    .time-picker-container {
+      width: rem($width);
+
+      &.active {
+        height: rem(270);
+
+        border-radius: rem(8);
+      }
+
+      .time-lists {
+        width: rem($width);
+
+        .time-panel-column {
+          margin-block: rem(4);
+
+          .time-cell {
+            height: rem(30);
+
+            .time-cell-inner {
+              font-size: rem(16);
+            }
+          }
+        }
+      }
+      .actions {
+        margin-inline: rem(4);
+
+        .ok-button {
+          font-size: rem(16);
+          width: rem(70);
+          height: rem(20);
+        }
+      }
+    }
+  }
+}

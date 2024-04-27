@@ -1,0 +1,9 @@
+@import "src/styles/imports.scss";
+.error-message {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  font-size: rem(12);
+  color: $appleRed;
+  font-family: "arial";
+}

@@ -1,0 +1,17 @@
+@import "src/styles/imports.scss";
+
+.radio-buttons-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: rem(6);
+  .title {
+    font-size: rem(16);
+    font-family: $font;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+  }
+}

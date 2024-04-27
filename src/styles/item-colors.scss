@@ -1,0 +1,43 @@
+@import "settings";
+
+.item {
+  &.blue {
+    background-color: $basic-color-blue;
+  }
+  &.red {
+    background-color: $basic-color-red;
+  }
+  &.green {
+    background-color: $basic-color-green;
+  }
+  &.yellow {
+    background-color: $basic-color-yellow;
+  }
+  &.purple {
+    background-color: $basic-color-purple;
+  }
+  &.pink {
+    background-color: $basic-color-pink;
+  }
+}
+
+.text {
+  &.blue {
+    color: $basic-color-blue;
+  }
+  &.red {
+    color: $basic-color-red;
+  }
+  &.green {
+    color: $basic-color-green;
+  }
+  &.yellow {
+    color: $basic-color-yellow;
+  }
+  &.purple {
+    color: $basic-color-purple;
+  }
+  &.pink {
+    color: $basic-color-pink;
+  }
+}

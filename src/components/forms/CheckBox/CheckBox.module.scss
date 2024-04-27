@@ -1,0 +1,62 @@
+@import "src/styles/imports.scss";
+.checkbox-wrapper {
+  input {
+    display: none;
+  }
+  label {
+    display: flex;
+    .image-wrapper {
+      width: rem(17);
+    }
+    .label {
+      margin-inline-start: rem(5);
+      font-size: rem(14);
+      line-height: rem(14);
+    }
+  }
+}
+
+@media (min-width: em($tablet)) {
+  .checkbox-wrapper {
+    label {
+      .image-wrapper {
+        width: rem(17);
+      }
+      .label {
+        margin-inline-start: rem(5);
+        font-size: rem(14);
+        line-height: rem(14);
+      }
+    }
+  }
+}
+
+@media (min-width: em($desktop)) {
+  .checkbox-wrapper {
+    label {
+      .image-wrapper {
+        width: rem(20);
+      }
+      .label {
+        margin-inline-start: rem(5);
+        font-size: rem(14);
+        line-height: rem(14);
+      }
+    }
+  }
+}
+
+@media (min-width: em($desktop_large)) {
+  .checkbox-wrapper {
+    label {
+      .image-wrapper {
+        width: rem(20);
+      }
+      .label {
+        margin-inline-start: rem(5);
+        font-size: rem(14);
+        line-height: rem(14);
+      }
+    }
+  }
+}
