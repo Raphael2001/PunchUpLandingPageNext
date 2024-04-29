@@ -9,10 +9,10 @@ type Props = {
 };
 
 function Scrollbar({ extraStyles = {}, children, className = "" }: Props) {
-  const trackRef = useRef<HTMLDivElement>();
-  const thumbRef = useRef<HTMLDivElement>();
-  const contentContainerRef = useRef<HTMLDivElement>();
-  const contentRef = useRef<HTMLDivElement>();
+  const trackRef = useRef<HTMLDivElement>(null);
+  const thumbRef = useRef<HTMLDivElement>(null);
+  const contentContainerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const [shouldHideScrollbar, setShouldHideScrollbar] = useState(false);
 
@@ -85,7 +85,7 @@ function Scrollbar({ extraStyles = {}, children, className = "" }: Props) {
       y: e.clientY,
     };
 
-    const handleMouseMove = (e: React.MouseEvent) => {
+    const handleMouseMove = (e: React.MouseEvent | any) => {
       const dx = e.clientX - startPos.x;
       const dy = e.clientY - startPos.y;
       const scrollRatio = contentEle.clientHeight / contentEle.scrollHeight;
@@ -116,7 +116,7 @@ function Scrollbar({ extraStyles = {}, children, className = "" }: Props) {
       y: touch.clientY,
     };
 
-    const handleTouchMove = (e: React.TouchEvent) => {
+    const handleTouchMove = (e: React.TouchEvent | any) => {
       const touch = e.touches[0];
       const dx = touch.clientX - startPos.x;
       const dy = touch.clientY - startPos.y;

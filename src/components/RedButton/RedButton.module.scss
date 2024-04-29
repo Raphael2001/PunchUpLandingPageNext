@@ -1,0 +1,19 @@
+@import "src/styles/imports.scss";
+.btn {
+  width: fit-content;
+  background-color: $main-red;
+  border-radius: rem(40);
+  height: fit-content;
+  padding: rem(8) rem(30);
+
+  &:hover,
+  &:active {
+    background: darken($main-red, 5%);
+  }
+  @include focus-item();
+  .btn-text {
+    font-size: rem(18);
+    font-family: $font;
+    color: white;
+  }
+}

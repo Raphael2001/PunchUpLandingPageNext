@@ -100,3 +100,12 @@
     font-display: swap;
   }
 }
+
+@mixin focus-item() {
+  border: 1px solid transparent;
+
+  &:focus,
+  &:focus-visible {
+    border-color: black;
+  }
+}

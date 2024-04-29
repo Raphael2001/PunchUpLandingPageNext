@@ -1,0 +1,77 @@
+@import "src/styles/imports";
+
+.home-banner {
+  width: 100%;
+  position: relative;
+  height: rem(350);
+  overflow: hidden;
+
+  .top-banner-bg-media {
+    height: 100%;
+
+    img {
+      height: 100%;
+      min-width: 100%;
+
+      object-fit: cover;
+    }
+  }
+  .banner-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      color: white;
+      font-family: $font-bold;
+      font-size: rem(35);
+      letter-spacing: 2.7px;
+    }
+    .subtitle {
+      color: white;
+      font-family: $font-light;
+      font-size: rem(24);
+    }
+  }
+}
+
+@media (min-width: em($tablet)) {
+  .home-banner {
+    height: rem(550);
+    .banner-content {
+      .title {
+        font-size: rem(55);
+      }
+      .subtitle {
+        font-size: rem(30);
+      }
+    }
+  }
+}
+
+@media (min-width: em($desktop)) {
+  .home-banner {
+    height: rem(780);
+    .banner-content {
+      .title {
+        font-size: rem(70);
+      }
+      .subtitle {
+        font-size: rem(40);
+      }
+    }
+  }
+}
+
+@media (min-width: em($desktop_large)) {
+  .home-banner {
+    height: rem(1000);
+  }
+}

@@ -1,0 +1,24 @@
+@import "src/styles/imports.scss";
+$height: rem(90);
+.header-wrapper {
+  height: $height;
+  width: 100%;
+  background-color: white;
+  .header-content {
+    height: $height;
+    position: fixed;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    left: 0;
+    width: 100%;
+    padding-inline: rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    .logo-wrapper {
+      width: rem(80);
+    }
+  }
+}

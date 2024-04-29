@@ -1,0 +1,66 @@
+@import "src/styles/imports";
+.about-us-wrapper {
+  padding-block: rem(20) rem(150);
+  padding-inline: rem(15);
+  background-color: $background;
+  .about-us-content {
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding-block: rem(20);
+    padding-inline: rem(15);
+    border-radius: 10px;
+
+    .title {
+      text-align: center;
+      font-size: rem(37);
+      font-family: $font-medium;
+      letter-spacing: 2.2px;
+      color: $main-red;
+    }
+    .content {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .about-us-text {
+        font-size: rem(16);
+        font-family: $font;
+        margin-top: rem(18);
+      }
+      .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: rem(18);
+      }
+    }
+  }
+}
+
+@media (min-width: em($tablet)) {
+  .about-us-wrapper {
+    padding: rem(30) rem(30) rem(150);
+
+    .about-us-content {
+      padding: rem(30);
+
+      .title {
+        font-size: rem(45);
+      }
+    }
+  }
+}
+
+@media (min-width: em($desktop)) {
+  .about-us-wrapper {
+    padding: rem(40) rem(40) rem(150);
+
+    .about-us-content {
+      padding: rem(40);
+
+      .title {
+        font-size: rem(50);
+      }
+    }
+  }
+}
