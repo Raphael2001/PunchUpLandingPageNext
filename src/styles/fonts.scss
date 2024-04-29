@@ -10,6 +10,18 @@ $fontVariations: (
   Light: "/assets/fonts/#{$font-name}-Light",
 );
 
+$font-name-english: "LibreBaskerville";
+
+$fontVariationsEnglish: (
+  Regular: "/assets/fonts/#{$font-name}-Regular",
+
+  Bold: "/assets/fonts/#{$font-name}-Bold",
+);
+
 @each $weight, $path in $fontVariations {
   @include font-face("#{$font-name}-#{$weight}", normal, $path);
+}
+
+@each $weight, $path in $fontVariationsEnglish {
+  @include font-face("#{$font-name-english}-#{$weight}", normal, $path);
 }

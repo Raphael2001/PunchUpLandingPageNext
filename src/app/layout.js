@@ -6,6 +6,8 @@ import ScreenLoader from "components/ScreenLoader/ScreenLoader";
 
 const fonts = ["Regular", "Medium", "SemiBold", "Bold", "Light"];
 const fontName = "Heebo";
+const fontsEnglish = ["Regular", "Bold"];
+const fontNameEnglish = "LibreBaskerville";
 
 export default function RootLayout({ children }) {
   return (
@@ -15,6 +17,17 @@ export default function RootLayout({ children }) {
           <link
             rel="preload"
             href={`/assets/fonts/${fontName}-${font}.ttf`}
+            as="font"
+            crossOrigin=""
+            key={font}
+          />
+        );
+      })}
+      {fontsEnglish.map((font) => {
+        return (
+          <link
+            rel="preload"
+            href={`/assets/fonts/${fontNameEnglish}-${font}.ttf`}
             as="font"
             crossOrigin=""
             key={font}
