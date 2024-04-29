@@ -30,13 +30,12 @@
     justify-content: center;
     .title {
       color: white;
-      font-family: $font-bold;
+      font-family: $font-bold-english;
       font-size: rem(35);
-      letter-spacing: 2.7px;
     }
     .subtitle {
       color: white;
-      font-family: $font-light;
+      font-family: $font-english;
       font-size: rem(24);
     }
   }
