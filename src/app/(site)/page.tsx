@@ -4,6 +4,7 @@ import Header from "components/Header/Header";
 import HomeBanner from "components/HomeBanner/HomeBanner";
 import AboutUs from "components/AboutUs/AboutUs";
 import Form from "components/Form/Form";
+import MetaTagsData from "components/MetaTagsData/MetaTagsData";
 
 async function init() {
   const res = await ApiServer.init({});
@@ -14,6 +15,7 @@ async function init() {
 export default async function Home() {
   return (
     <main className={styles.main}>
+      <MetaTagsData />
       <Header />
       <HomeBanner />
       <AboutUs />
