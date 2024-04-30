@@ -23,7 +23,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,11 +32,13 @@
       color: white;
       font-family: $font-bold-english;
       font-size: rem(35);
+      @include text-shadow();
     }
     .subtitle {
       color: white;
       font-family: $font-english;
       font-size: rem(24);
+      @include text-shadow();
     }
   }
 }
