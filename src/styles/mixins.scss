@@ -62,7 +62,7 @@
 
 @mixin placeholder() {
   color: $grey;
-  font-family: "Arial";
+  font-family: $font;
   font-size: rem(16);
 
   @media (min-width: em($desktop)) {
@@ -72,7 +72,7 @@
 
 @mixin input() {
   color: black;
-  font-family: "Arial";
+  font-family: $font;
   font-size: rem(16);
   background-color: transparent;
 
