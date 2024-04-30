@@ -1,0 +1,31 @@
+name: Bump version on merge to main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  version-bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
+      - name: Install npm dependencies
+        run: yarn
+
+      - name: Bump package version
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          npm version patch -m "Bump version to %s [skip ci]"
+          git push --follow-tags
+
+      - name: Push changes
+        run: git push
