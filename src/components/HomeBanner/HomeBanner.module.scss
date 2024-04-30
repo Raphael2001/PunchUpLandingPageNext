@@ -32,15 +32,13 @@
       color: white;
       font-family: $font-bold-english;
       font-size: rem(35);
-      text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-        0px -4px 10px rgba(255, 255, 255, 0.3);
+      @include text-shadow();
     }
     .subtitle {
       color: white;
       font-family: $font-english;
       font-size: rem(24);
-      text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-        0px -4px 10px rgba(255, 255, 255, 0.3);
+      @include text-shadow();
     }
   }
 }
