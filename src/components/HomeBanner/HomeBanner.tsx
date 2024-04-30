@@ -13,8 +13,8 @@ function HomeBanner(props: Props) {
         <img src={Banner.src} />
       </div>
       <div className={styles["banner-content"]}>
-        <h1 className={styles["title"]}>Punch up</h1>
-        <h2 className={styles["subtitle"]}>fitness & boxing</h2>
+        <h1 className={styles["title"]}>PUNCH UP</h1>
+        <h2 className={styles["subtitle"]}>FITNESS & BOXING</h2>
       </div>
     </div>
   );
