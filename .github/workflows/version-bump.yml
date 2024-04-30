@@ -1,20 +1,20 @@
-name: Bump version on merge to main
+name: Update version on PR merge to main
 
 on:
-  push:
+  pull_request:
     branches:
       - main
-
-permissions:
-  contents: write
-  pull-requests: write
+    types: [closed]
 
 jobs:
   version-bump:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: dev # Checkout the 'dev' branch
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,8 +29,9 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          npm version patch -m "Bump version to %s [skip ci]"
-          git push --follow-tags
+          yarn version --patch --no-git-tag-version
+          git commit -am "Bump version to $(jq -r '.version' package.json) [skip ci]"
+          git tag "v$(jq -r '.version' package.json)"
 
-      - name: Push changes
-        run: git push
+      - name: Push changes to dev
+        run: git push origin HEAD:dev --tags
