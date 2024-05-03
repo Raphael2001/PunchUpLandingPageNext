@@ -9,7 +9,7 @@
   .text-area {
     overflow: hidden;
     border: none;
-    border-bottom: 1px solid rgba(148, 148, 148, 1);
+    border-bottom: 1px solid $grey;
     border-radius: 0px;
     &:focus {
       border-bottom: 1px solid $input-focus-color;

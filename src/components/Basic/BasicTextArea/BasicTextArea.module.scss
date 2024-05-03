@@ -3,7 +3,7 @@
 .text-area {
   width: 100%;
 
-  border-color: rgba(148, 148, 148, 1);
+  border-color: $grey;
 
   @include input();
 
