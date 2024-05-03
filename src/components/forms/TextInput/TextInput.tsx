@@ -4,6 +4,7 @@ import basic from "./TextInput.module.scss";
 import { inputEvent, onKeyDownInput } from "utils/types/inputs";
 import BasicInput from "components/Basic/BasicInput/BasicInput";
 import BasicInputErrrorMsg from "components/Basic/BasicInputErrrorMsg/BasicInputErrrorMsg";
+import useInputAccessibility from "utils/hooks/useInputAccessibility";
 
 type Props = {
   value: string | number;
@@ -20,6 +21,8 @@ type Props = {
   onBlur?: () => void;
   type?: HTMLInputTypeAttribute;
   onKeyDown?: (e: onKeyDownInput) => void;
+  ariaLabel?: string;
+  required?: boolean;
 };
 
 const TextInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
@@ -38,7 +41,17 @@ const TextInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
     onFocus = () => {},
     onBlur = () => {},
     onKeyDown = () => {},
+    ariaLabel = "",
+    required = false,
   } = props;
+
+  const accessibilityProps = useInputAccessibility({
+    ariaLabel,
+    showError,
+    required,
+    placeholder,
+    name,
+  });
 
   function styles(className: string) {
     return (basic[className] || "") + " " + (extraStyles[className] || "");
@@ -59,6 +72,7 @@ const TextInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
         ref={ref}
         className={className}
         onKeyDown={onKeyDown}
+        {...accessibilityProps}
       />
       <BasicInputErrrorMsg showError={showError} errorMessage={errorMessage} />
     </div>

@@ -36,6 +36,8 @@ function InputsCreator(props: Props) {
     rows = 10,
     type = "text",
     accept = "*",
+    ariaLabel,
+    required,
   } = input;
 
   function onChangeInput(e: inputEvent) {
@@ -67,6 +69,8 @@ function InputsCreator(props: Props) {
     value: value,
     name: name,
     disabled: isDisabled,
+    ariaLabel,
+    required,
   };
 
   switch (inputType) {

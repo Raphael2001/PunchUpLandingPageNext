@@ -16,4 +16,6 @@ export interface FormInputData {
   rows?: number;
   type?: HTMLInputTypeAttribute;
   accept?: string;
+  required?: boolean;
+  ariaLabel?: string;
 }

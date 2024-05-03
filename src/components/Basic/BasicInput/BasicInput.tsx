@@ -21,6 +21,11 @@ type Props = {
   type?: HTMLInputTypeAttribute;
   className?: string;
   onKeyDown?: (e: onKeyDownInput) => void;
+  ariaRequired?: boolean;
+  ariaInvalid?: boolean;
+
+  ariaLabel?: string;
+  ariaLabelledBy?: string;
 };
 
 const BasicInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
@@ -37,6 +42,11 @@ const BasicInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
     onBlur = () => {},
     className = "",
     onKeyDown = () => {},
+    ariaRequired = false,
+    ariaInvalid = false,
+
+    ariaLabel = "",
+    ariaLabelledBy = "",
   } = props;
 
   function styles(className: string) {
@@ -69,6 +79,10 @@ const BasicInput = forwardRef<HTMLInputElement, Props>((props, ref) => {
       onBlur={onBlur}
       ref={ref}
       onKeyDown={onKeyDownHandler}
+      aria-required={ariaRequired}
+      aria-invalid={ariaInvalid}
+      aria-labelledby={ariaLabelledBy}
+      aria-label={ariaLabel}
     />
   );
 });

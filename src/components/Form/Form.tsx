@@ -18,6 +18,8 @@ function Form(props: Props) {
         label: "שם מלא",
         inputType: FORM_INPUTS_TYPES.ANIMATED_INPUT,
         rules: ["not_empty", "full_name"],
+        required: true,
+        ariaLabel: "שם מלא",
       },
       {
         name: "phone",
@@ -25,6 +27,8 @@ function Form(props: Props) {
         inputType: FORM_INPUTS_TYPES.ANIMATED_INPUT,
         rules: ["not_empty", "phone"],
         type: "tel",
+        required: true,
+        ariaLabel: "טלפון",
       },
     ],
   };
