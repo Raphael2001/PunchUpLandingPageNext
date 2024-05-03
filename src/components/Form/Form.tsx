@@ -35,7 +35,7 @@ function Form(props: Props) {
     <section id="lead-form" className={styles["form-wrapper"]}>
       <div className={styles["form-content"]}>
         <h3 className={styles["title"]}>השארת פרטים</h3>
-        <h6 className={styles["subtitle"]}>תשאירו פרטים ונציג יחזור אליכם</h6>
+        <h4 className={styles["subtitle"]}>תשאירו פרטים ונציג יחזור אליכם</h4>
         <div className={styles["form"]}>
           <FormCreator
             formData={formData}
