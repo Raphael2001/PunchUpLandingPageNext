@@ -9,7 +9,7 @@ import Theme from "./theme-image.webp";
 function AnimatedBlobImage(props: Props) {
   return (
     <div className={styles["image"]}>
-      <img src={Theme.src} />
+      <img src={Theme.src} alt="test" />
     </div>
   );
 }

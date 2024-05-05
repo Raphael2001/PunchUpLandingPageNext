@@ -10,7 +10,7 @@ function HomeBanner(props: Props) {
   return (
     <div className={styles["home-banner"]}>
       <div className={styles["top-banner-bg-media"]}>
-        <img src={Banner.src} />
+        <img src={Banner.src} alt="test" />
       </div>
       <div className={styles["banner-content"]}>
         <h1 className={styles["title"]}>PUNCH UP</h1>
