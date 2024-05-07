@@ -1,6 +1,6 @@
 @import "src/styles/imports";
 .about-us-wrapper {
-  padding-block: rem(20) rem(150);
+  padding-bottom: rem(150);
   padding-inline: rem(15);
   background-color: $background;
   .about-us-content {
@@ -39,7 +39,7 @@
 
 @media (min-width: em($tablet)) {
   .about-us-wrapper {
-    padding: rem(30) rem(30) rem(150);
+    padding: 0 rem(30) rem(150);
 
     .about-us-content {
       padding: rem(30);
@@ -53,7 +53,7 @@
 
 @media (min-width: em($desktop)) {
   .about-us-wrapper {
-    padding: rem(40) rem(40) rem(150);
+    padding: 0 rem(40) rem(150);
 
     .about-us-content {
       padding: rem(40);
