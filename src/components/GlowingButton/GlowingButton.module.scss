@@ -1,0 +1,37 @@
+@import "src/styles/imports.scss";
+
+.button {
+  border-radius: rem(55);
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font;
+
+  font-size: rem(22);
+  padding: rem(10) rem(50);
+  color: $main-red;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid $main-red;
+  animation: glowing 1500ms infinite;
+}
+
+@keyframes glowing {
+  0% {
+    $current-color: $main-red;
+    border-color: $current-color;
+    box-shadow: 0 0 3px $current-color;
+  }
+  50% {
+    $current-color: lighten($main-red, 20%);
+
+    border-color: $current-color;
+    box-shadow: 0 0 40px $current-color;
+  }
+  100% {
+    $current-color: $main-red;
+
+    border-color: $current-color;
+    box-shadow: 0 0 3px $current-color;
+  }
+}
